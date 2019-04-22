@@ -42,7 +42,8 @@ app.get('/:phone/:baht', function (req, res) {
          QRCode.toFile("./images_qrcode/filename.png", payload , function (err) {
           if (err) throw err
          console.log("done"+parsed)
-         res.sendFile(path.join(__dirname+'/index.html'));
+       res.end('ok')
+         //res.sendFile(path.join(__dirname+'/index.html'));
          
       })
       //res.end('ok')
